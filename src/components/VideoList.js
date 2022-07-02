@@ -28,7 +28,7 @@ const VideoList = ({ category }) => {
         const query = category === 'all' ? '' : `${category}`;
         console.log(query);
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&regionCode=kr&maxResults=25&q=${query}&type=video&key=AIzaSyB5oYWdKBm7k6OMV2NI87VQrqJO4db10Rg`,
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&regionCode=kr&maxResults=10&q=${query}&type=video&key=AIzaSyB5oYWdKBm7k6OMV2NI87VQrqJO4db10Rg`,
         );
         setItems(response.data.items);
       } catch (e) {
